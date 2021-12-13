@@ -1,0 +1,42 @@
+﻿@model HospitalEnCasaDevIng.Models.AsignarMedicoPaciente
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>AsignarMedicoPaciente</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.IdentificacionMedicoFK.Nombre)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.IdentificacionMedicoFK.Nombre)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.IdentificacionPacienteFK.TipoDocumento)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.IdentificacionPacienteFK.TipoDocumento)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.IdentificacionAsignacion }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

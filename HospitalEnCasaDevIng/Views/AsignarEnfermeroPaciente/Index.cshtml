@@ -1,0 +1,39 @@
+﻿@model IEnumerable<HospitalEnCasaDevIng.Models.AsignarEnfermeroPaciente>
+
+@{
+  
+}
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayName("Enfermero")
+            </th>
+            <th>
+                @Html.DisplayName("Paciente")
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdentificacionEnfermero.Identificacion)
+                @Html.DisplayFor(modelItem => item.IdentificacionEnfermero.Nombre)
+                @Html.DisplayFor(modelItem => item.IdentificacionEnfermero.Apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdentificacionPaciente.Identificacion)
+                @Html.DisplayFor(modelItem => item.IdentificacionPaciente.Nombre)
+                @Html.DisplayFor(modelItem => item.IdentificacionPaciente.Apellidos)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.IdentificacionAsignacion }) |
+                @Html.ActionLink("Details", "Details", new { id=item.IdentificacionAsignacion }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.IdentificacionAsignacion })
+            </td>
+        </tr>
+    }
+    </table>

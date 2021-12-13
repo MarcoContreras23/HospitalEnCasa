@@ -29,6 +29,10 @@ namespace HospitalEnCasaDevIng.Models
         public DbSet<Paciente> Paciente { get; set; }
         public DbSet<Medico> Medico { get; set; }
 
+        public DbSet<AsignarEnfermeroPaciente> AsignarEnfermeroPaciente { get; set; }
+
+        public DbSet<AsignarMedicoPaciente> AsignarMedicoPaciente { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

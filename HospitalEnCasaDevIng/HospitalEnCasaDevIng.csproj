@@ -170,10 +170,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AsignarEnfermeroPacienteController.cs" />
+    <Compile Include="Controllers\AsignarMedicoPacienteController.cs" />
     <Compile Include="Controllers\EnfermeroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MedicoController.cs" />
+    <Compile Include="Controllers\PacienteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -181,8 +184,14 @@
     <Compile Include="Migrations\202112131704156_Enfermero.Designer.cs">
       <DependentUpon>202112131704156_Enfermero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112131942532_Asignaciones.cs" />
+    <Compile Include="Migrations\202112131942532_Asignaciones.Designer.cs">
+      <DependentUpon>202112131942532_Asignaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AsignarEnfermeroPaciente.cs" />
+    <Compile Include="Models\AsignarMedicoPaciente.cs" />
     <Compile Include="Models\Enfermero.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -257,6 +266,21 @@
     <Content Include="Views\Medico\Details.cshtml" />
     <Content Include="Views\Medico\Edit.cshtml" />
     <Content Include="Views\Medico\Index.cshtml" />
+    <Content Include="Views\Paciente\Create.cshtml" />
+    <Content Include="Views\Paciente\Delete.cshtml" />
+    <Content Include="Views\Paciente\Details.cshtml" />
+    <Content Include="Views\Paciente\Edit.cshtml" />
+    <Content Include="Views\Paciente\Index.cshtml" />
+    <Content Include="Views\AsignarEnfermeroPaciente\Create.cshtml" />
+    <Content Include="Views\AsignarEnfermeroPaciente\Delete.cshtml" />
+    <Content Include="Views\AsignarEnfermeroPaciente\Details.cshtml" />
+    <Content Include="Views\AsignarEnfermeroPaciente\Edit.cshtml" />
+    <Content Include="Views\AsignarEnfermeroPaciente\Index.cshtml" />
+    <Content Include="Views\AsignarMedicoPaciente\Create.cshtml" />
+    <Content Include="Views\AsignarMedicoPaciente\Delete.cshtml" />
+    <Content Include="Views\AsignarMedicoPaciente\Details.cshtml" />
+    <Content Include="Views\AsignarMedicoPaciente\Edit.cshtml" />
+    <Content Include="Views\AsignarMedicoPaciente\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -277,6 +301,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202112131704156_Enfermero.resx">
       <DependentUpon>202112131704156_Enfermero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112131942532_Asignaciones.resx">
+      <DependentUpon>202112131942532_Asignaciones.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
